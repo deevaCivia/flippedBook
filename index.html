@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <!-- sumber : https://youtu.be/zrBVFGlnyA8?si=xphDq3SRelIFe_DD -->
+</head>
+
+<body>
+    <div id="playPrompt" class="play-prompt">
+        <button id="playButton">Open</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const playPrompt = document.getElementById('playPrompt');
+            const playButton = document.getElementById('playButton');
+            const wrapper = document.querySelector('.wrapper');
+            const bgMusic = document.getElementById('bgMusic');
+            const snowCanvas = document.getElementById('snow');
+        
+            // Pastikan wrapper dan canvas salju tersembunyi saat awal
+            wrapper.style.display = 'none';
+            snowCanvas.style.display = 'none';
+        
+            playButton.addEventListener('click', function() {
+                bgMusic.play();
+                playPrompt.style.display = 'none';
+                wrapper.style.display = 'block';
+                snowCanvas.style.display = 'block'; // Tampilkan canvas salju
+                
+                // Mulai animasi salju (pastikan fungsi ini ada di script.js)
+                if (typeof startSnowAnimation === 'function') {
+                    startSnowAnimation();
+                }
+            });
+        });
+    </script>
+
+    <div class="wrapper">
+        <div class="cover cover-left"></div>
+        <div class="cover cover-right"></div>
+
+        <div class="book">
+            <!-- profile page -->
+            <div class="book-page page-left">
+                <div class="profile-page">
+                    <img src="img/img1 edit.jpg" alt="">
+                    <h1 class="dosis">THE  STORY  OF  US</h1>
+                    <br>
+                    <p class="dosis">- Chapter One -</p>
+                </div>
+            </div>
+
+            <!-- page 1 & 2 -->
+            <div class="book-page page-right turn" id="turn-1">
+                <!-- page 1 -->
+                <div class="page-front">
+                    <h1 class="title">- 365 Day -</h1>
+                    <div class="content-box">
+                        <div class="content-text">
+                            <p class="edu-au-vic-wa-nt-hand">Run <br> it <br> Back!</p>
+                        </div>   
+                    </div>
+
+                    <span class="number-page"></span>
+
+                    <!-- next button -->
+                    <span class="nextprev-btn" data-page="turn-1">
+                        <i class="bx bx-chevron-right"></i>
+                    </span>
+    
+                </div>
+                <!-- page 2 (official) -->
+                <div class="page-back">
+                    <h1 class="title">When it come official!</h1>
+                    <div class="official-box">
+                        <div class="official-content">
+                            <img src="img/kucing2.jpg" alt="" width="150rem">
+                        </div>
+
+                        <div class="official-content">
+                            <p class="edu-au-vic-wa-nt-hand">The first gift you gave, on the day you confessed your feelings. <br> 
+                            you said : " ini for vaa.. karena vaa suka kucing mar nd bisa pelihara kucing "</p>
+                        </div>
+
+                        <div class="official-content">
+                            <h3 class="edu-au-vic-wa-nt-hand">Kawasan, Megamas</h3>
+                            <p class="edu-au-vic-wa-nt-hand">The moment I accepted you to be my boyfriend </p>
+                            <img src="img/first date.png" alt=""   width="205rem" height="90rem" class="foto-2"
+                            >
+                        </div>
+
+                        <div class="official-content">
+                            <img src="img/kawasan1.jpg" alt=""width="150rem" height="190rem">
+                        </div>
+                    </div>
+                    <span class="number-page"></span>
+
+                    <!-- prev button -->
+                    <span class="nextprev-btn back" data-page="turn-1">
+                        <i class='bx bx-chevron-left'></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- page 3 & 4 -->
+            <div class="book-page page-right turn" id="turn-2">
+                <!-- page 3 songs -->
+                <div class="page-front">
+                    <h1 class="title"><i class='bx bx-music'></i> Songs that remind me of you <i class='bx bx-music'></i></h1>
+                    <div class="songs-box">
+                        <div class="songs-content">
+                            <img src="img/song1.png" alt="" width="111rem" height="160rem">
+                        </div>
+
+                        <div class="songs-content">
+                            <img src="img/song2.png" alt="" width="111rem" height="160rem">
+                        </div> 
+
+                        <div class="songs-content">
+                            <img src="img/song3.png" alt="" width="111rem" height="160rem">
+                        </div>
+
+                        <div class="songs-content">
+                            <img src="img/song4.png" alt="" width="111rem" height="160rem">
+                        </div>  
+                        
+                        <div class="songs-content">
+                            <img src="img/song5.png" alt="" width="111rem" height="160rem">
+                        </div>    
+                        <div class="songs-content">
+                            <img src="img/song6.png" alt="" width="111rem" height="160rem">
+                        </div>    
+                    </div>
+                    <span class="number-page"></span>
+
+                    <!-- prev button -->
+                    <span class="nextprev-btn" data-page="turn-2">
+                        <i class='bx bx-chevron-right'></i>
+                    </span>
+                </div>
+
+                <!-- page 4 (message) -->
+                <div class="page-back">
+                    <h1 class="title">My Favorite Message <i class='bx bxs-star' ></i></h1>
+                    <div class="message-box">
+                        <img src="img/ss4.jpg" alt="Favorite moment 1">
+                        <img src="img/ss5.jpg" alt="Favorite moment 2">
+                        <img src="img/ss3.jpg" alt="Favorite moment 3">
+                        <img src="img/ss7.jpg" alt="Favorite moment 4">
+                        <img src="img/ss6.jpg" alt="Favorite moment 5">
+                        <img src="img/ss8.jpg" alt="Favorite moment 6">
+                    </div>
+                    <span class="number-page"></span>
+
+                    <!-- prev button -->
+                    <span class="nextprev-btn back" data-page="turn-2">
+                        <i class='bx bx-chevron-left'></i>
+                    </span>
+                </div>                   
+            </div>
+
+            <!-- page 5 & 6 -->
+            <div class="book-page page-right turn" id="turn-3">
+                <!-- page 5 (favorite ) -->
+                <div class="page-front">
+                    <h1 class="title">Photo of us <i class='bx bx-camera' ></i></h1> 
+                    <div class="favorite-box">
+                        <div class="favorite-content">
+                            <img src="img/moment1.jpg" alt="">
+                            <img src="img/moment2.jpg" alt="">
+                            <img src="img/moment3.jpg" alt="">
+                            <img src="img/moment4.jpg" alt="">
+                            <img src="img/moment5.jpg" alt="">
+                            <img src="img/moment6.jpg" alt="">
+                            <img src="img/moment7.jpg" alt="">
+                            <img src="img/moment8.jpg" alt="">
+                            <img src="img/moment9.jpg" alt="">
+                            <img src="img/moment10.jpg" alt="">
+                            <img src="img/moment11.jpg" alt="">
+                            <img src="img/moment12.jpg" alt="">
+                            <img src="img/moment13.jph.jpg" alt="">
+                            <img src="img/moment14.jpg" alt="">
+                            <img src="img/moment15.jpg" alt="">
+                            <img src="img/moment16.jpg" alt="">
+                            <img src="img/moment17.jpg" alt="">
+                            <img src="img/moment18.jpg" alt="">
+                            <img src="img/moment19.jpg" alt="">
+                            <img src="img/moment20.jpg" alt="">
+                        </div>
+                    </div>
+                    <span class="number-page"></span>
+
+                    <!-- prev button -->
+                    <span class="nextprev-btn" data-page="turn-3">
+                        <i class='bx bx-chevron-right'></i>
+                    </span>
+                </div>
+
+                <!-- page 6 (kata) -->
+                <div class="page-back">
+                    <div class="kata-box">
+                        <div class="kata-content">
+                            <Hi class="dosis">Hi babe,  my love,  my best friend...
+                                <br>
+                                Happy Anniversary! <i class='bx bxs-heart' ></i>
+                                <br>
+                                It doesn't feel like it's been 1 year, still don't think we can last this long. I want to say thank you for always being there for vaa, always faithful to hear complaints from vaa. Never angry or rude, but always speaks softly and always encourages. 
+                                <br>
+                                <br>
+                                We've been through a lot together-happiness, sadness, laughter, and challenges, but every moment has only strengthened our relationship. 
+                                <br>
+                                <br>
+                                Thankyou for being such a good boyfriend... You are my source of happiness, my support in times of trouble. You are a wonderful boyfriend, with a heart full of love, and infinite kindness. 
+                                <br>
+                                <br>
+                                On this day, I want to thank you for everything you have done for me. Thank you for your timeless love, your unconditional support, and your presence that makes my life complete. I can't wait to see what the future holds for both of us. 
+                                <br> <br>
+                                
+                                Happy first anniversary, my love. I love you more than words can express, and I am so lucky that you are a part of my life
+                                <br><br>
+                                <span class="notes">*note: I chose to wear pink and gray, because I love pink, and Finn loves gray. <br>
+                                Turns out pink and gray can be a very good combination, right? <br> Just like the two of us hehe ;></span>
+                                </p>
+                        </div>
+                    </div>
+                    <span class="number-page"></span>
+
+                    <!-- prev button -->
+                    <span class="nextprev-btn back" data-page="turn-3">
+                        <i class='bx bx-chevron-left'></i>
+                    </span>
+
+                    <a href="#" class="back-profile">
+                        <p>Page1</p>
+                        <i class='bx bx-home-heart' ></i>
+                    </a>
+                </div>
+            </div>       
+        </div>     
+    </div>
+    <canvas id="snow" ></canvas>
+    <audio id="bgMusic" autoplay loop>
+        <source src="Billie Eilish - BIRDS OF A FEATHER (Official Lyric Video) (mp3cut.net) (1).mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
